@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 0px 5%;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter:blur(10px);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.logo img {
+    height: 70px;
+    width: auto;
+}
+nav {
+    flex-grow: 1;
+}
+nav ul {
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #ff3300;
+}
+
+/*Back-Ground image*/
+.chef-hero {
+    background-image: url('../images/bg2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 110vh;
+    margin-top: -75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0;
+    z-index: 1;
+}
+@media only screen and (max-width: 468px){
+    .chef-hero {
+    height: 70vh !important;
+    padding: 30px;
+    }
+    .glassy-box {
+        display: flex;
+        gap: 0.2rem;
+        padding: 10px !important;
+        width: 100% !important;
+    }
+   
+    .icon-label{
+        display: flex;
+        align-items: center;
+        color: #fff;
+        gap: 1rem;
+        font-size: 12px;
+    }
+    .field-group{
+        width: 100% !important;
+    }
+
+    .field-group img{
+        width: 14px !important;
+        height: 14px !important;
+    }
+    .glassy-box button {
+        padding: 0.5rem !important;
+        border: none;
+        border-radius: 8px;
+        font-size: 10px!important;
+        cursor: pointer;
+        outline: none;
+        background: #ff3b30;
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+}
+@media only screen and (max-width: 768px){
+    .chef-hero {
+        height: 70vh !important;
+        padding: 30px;
+        }
+        .glassy-box {
+            display: flex;
+            gap: 0.2rem;
+            padding: 10px !important;
+            width: auto!important;
+            gap: 1rem;
+        }
+       
+        .icon-label{
+            display: flex;
+            align-items: center;
+            color: #fff;
+            gap: 1rem;
+            font-size: 10px;
+        }
+        .field-group{
+            width: auto !important;
+        }
+    
+        .field-group img{
+            width: 14px !important;
+            height: 14px !important;
+        }
+        .glassy-box button {
+            padding: 0.08rem 2rem !important;
+            border: none;
+            border-radius: 8px;
+            font-size: 10px !important;
+            cursor: pointer;
+            outline: none;
+            background: #ff3b30;
+            color: white;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+}
+
+/*Glass Box styling*/
+
+.glassy-box {
+    display: flex;
+    padding: 1rem;
+    width: 60%;
+    background: rgba(49, 7, 7, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.185);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.glassy-box button {
+    padding: 0px 60px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px !important;
+    cursor: pointer;
+    outline: none;
+    background: #d13a32;
+    color: white;
+    font-weight: bold;
+}
+.glassy-box button:hover {
+    background: #ff7961;
+}
+.field-group{
+    display: flex;
+    width: 35%;
+    line-height: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.icon-label{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 0.5rem;
+}
+.select{
+    display: flex;
+    margin-top: 10px;
+}
+.field-group img{
+    width: 18px;
+    height: 16px;
+    padding-right: 10px;
+}
+
+ /* OUR CHEFS Section8 */
+
+.chefs-section {
+    background: #121212;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.chefs-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff3b30;
+}
+.chefs-grid {
+    display: flex;
+}
+.div-1{
+    background-image: url('../images/left.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+.div-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.chef-card {
+    background: rgba(255, 255, 255, 0.007);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+}
+@media (max-width:998px) {
+    .chef-card {
+        width: 100%;
+    }
+    
+}
+.chef-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+.chef-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ff3b30;
+}
+.chef-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.chef-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.chef-card .expertise {
+    color: #ff3b30;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.chef-card .description {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.chef-card .likes {    
+    top: 0;
+    right: 0;
+    padding: 5px 3px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #fff;
+}
+/*Paginator Styling*/
+.pageniation-sec{
+    display: flex;
+    justify-content: center;
+
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+    border: 1px solid red;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 100px;
+}
+.page-number, .page-arrow {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    
+}
+.page-number:hover, .page-arrow:hover {
+    background: #ff3b30;
+    color: #000;
+}
+.page-number.active {
+    background: #ff3b30;
+    color: #000;
+}
+.page-arrow {
+    font-size: 1rem;
+}
+
+/*Footer Section*/
+
+footer {
+    background-color: #000000ec;
+    color: #fff;
+    padding: 50px 50px 20px 50px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;    
+}
+
+.footer-logo img {
+    max-width: 130px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    padding-right: 70px;
+    line-height: 2;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    padding: 0;
+    margin-top: 0px;
+}
+
+.footer-col ul li {
+    margin-bottom: 20px;
+    list-style-type: none;
+
+}
+.footer-col ul li img{
+    width: 15px;
+    height: 15px;
+    align-items: center;
+    padding: 10px 10px 0px 0px;
+}
+.footer-col ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-col ul.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 10px; 
+}
+
+.footer-col ul.social-icons li a img {
+    width: 16px;
+    height: 18px;
+}
+
+.footer-col ul.social-icons li a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+footer form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(194, 23, 23);
+    border-radius: 12px;
+    padding: 4px;
+    
+}
+footer input[type="email"] {
+    flex-grow: 1;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #000;
+    padding: 7px;
+}
+footer button {
+    background-color: rgb(163, 28, 28);
+    color: #fff;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+footer .copyright {
+    text-align: center;
+    font-size: 12px;
+}
+footer{
+    background-image: url('../images/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+
+

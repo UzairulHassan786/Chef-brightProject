@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    max-width: 100%;
+    padding: 0px 5%;
+    background-color: #0e0d0b;
+    backdrop-filter:blur(10px);
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: auto;
+    height: 70px;
+}
+nav{
+    flex-grow: 1;
+}
+nav .menu-items{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+li a:hover{
+    color: red;
+}
+
+
+/*Profile Section CSS*/
+.profile-section{
+    background-color: #0e0d0b;
+    padding: 30px 0px;
+    display: flex;
+    margin-top: -90px;
+    justify-content: center;
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    max-width: 1200px;
+    margin-top: 100px;
+}
+
+/* .profile-image {
+    flex: 1;
+} */
+.profile-image img {
+    max-width: 100%;
+    display: block;
+}
+.profile-image h1{
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 20px;
+    max-width: 100%;
+    background-color: #c02a2a;
+    border-radius: 0px 0px 10px 10px;
+}
+.inner{
+    margin: -30px 0px 0px -25px;
+    
+}
+.profile-content {
+    padding: 30px;
+    color: white;
+    flex: 2;
+    background-color: rgba(255, 0, 0, 0);
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+.bio {
+    margin-bottom: 25px;
+    font-size: 1em;
+    color: #ddd;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 20px;
+    margin-left: -30px;
+    border-radius: 10px;
+    color: rgb(221, 221, 221);
+}
+
+.about-details {
+    flex: 1;
+}
+
+.about h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ff4433;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.about li strong {
+    color: white;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.services-list li {
+    flex: 0 0 48%;
+    list-style: none;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f73e3e;
+}
+
+
+.get-in-touch {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4433;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-in-touch:hover {
+    background-color: #ff2211;
+}
+@media (min-width: 768px) {
+    .profile-card {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .profile-image {
+        flex: 1 1 30%;
+        max-width: 100%;
+    }
+
+    .profile-content {
+        flex: 200 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+/*Gallery Section*/
+
+.gallery-section {
+    text-align: center;
+    padding: 50px 20px 100px 20px;
+    background-color: #0e0d0b;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 0 50px;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; 
+}
+
+.gallery-item img {
+    max-width: 100%;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 1em;
+    line-height: 1.6;
+    opacity: 0;
+    white-space: pre-wrap;
+    transition: opacity 3s ease;
+}
+
+.gallery-item:hover .content-overlay {
+    opacity: 1;
+    font-weight: bold;
+}
+
+/*Footer Section*/
+
+footer {
+    background-color: #000000ec;
+    color: #fff;
+    padding: 50px 50px 20px 50px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;    
+}
+
+.footer-logo img {
+    max-width: 130px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    padding-right: 70px;
+    line-height: 2;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    padding: 0;
+    margin-top: 0px;
+}
+
+.footer-col ul li {
+    margin-bottom: 20px;
+    list-style-type: none;
+
+}
+.footer-col ul li img{
+    width: 15px;
+    height: 15px;
+    align-items: center;
+    padding: 10px 10px 0px 0px;
+}
+.footer-col ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-col ul.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 10px; 
+}
+
+.footer-col ul.social-icons li a img {
+    width: 16px;
+    height: 18px;
+}
+
+.footer-col ul.social-icons li a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+footer form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(194, 23, 23);
+    border-radius: 12px;
+    padding: 4px;
+    
+}
+footer input[type="email"] {
+    flex-grow: 1;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #000;
+    padding: 7px;
+}
+footer button {
+    background-color: rgb(163, 28, 28);
+    color: #fff;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 12px;
+}
+footer{
+    background-image: url('../images/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+

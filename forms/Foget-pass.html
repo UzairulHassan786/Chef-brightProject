@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('/assests/images/chef-reg.svg') no-repeat center center/cover;
+            max-width: 100%;
+            padding: 5rem 4rem;
+            min-height: 80vh;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.3rem;
+            background: rgba(0, 0, 0, 0.014);
+            backdrop-filter: blur(8px);
+            padding: 4rem 1rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            max-width: 100%;
+        }
+
+        h1 {
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 400;
+            color: white;
+            padding-block: 1rem;
+        }
+
+        input {
+            padding: 1rem;
+            max-width: 100%;
+            border: 2px solid red;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1) url('/assests/images/sms.svg') no-repeat 10px center;
+            background-size: 18px 18px;
+            color: rgb(136, 136, 136);
+            padding-inline: 2rem;
+            font-size: 0.9rem;
+        }
+
+        input::placeholder {
+            color: white;
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 1em;
+            width: 100%;
+            background-color: #b82222;
+            border: none;
+            font-size: 0.8rem;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff3b3b;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="forget-container">
+            <form>
+                <h1>Forgot Your Password</h1>
+                <input type="email" placeholder="Enter your registered email">
+                <button type="submit">Send OTP</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

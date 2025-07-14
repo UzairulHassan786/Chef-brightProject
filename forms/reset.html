@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reset Password</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-image: url(/assests/images/chef-reg.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 100% 100%;
+            min-height: 100vh;
+            color: white;
+            padding: 5rem 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .reset-body {
+            background: rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 4rem 3rem;
+            max-width: 500px;
+            border-radius: 20px;
+        }
+
+        h1 {
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 400;
+            padding-bottom: 2rem;
+            color: white;
+        }
+
+        input::placeholder {
+            color: #ddd;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 2px solid #ff5252 !important;
+            border-radius: 10px !important;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            background: url('/assests/images/password.svg') no-repeat 10px center;
+            background-size: 16px 16px;
+            border-radius: 5px;
+            padding-left: 2rem;
+        }
+        .btn-reset {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #f12727;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="reset-body">
+            <form>
+                <h1>Reset Password</h1>
+                <div class="form-group">
+                    <input type="password" placeholder="New Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn-reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,621 @@
+header {
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 100;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(7, 0, 0, 0);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff3300;
+}
+
+.hero-section {
+    background-image: url('../images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: -90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    font-style: italic;
+}
+.hero-section p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-style: italic;
+}
+
+.button {
+    background-color: #b83d2d;
+    color: #fff;
+    padding: 10px 50px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.experts-section {
+    position: relative;
+    padding: 50px 20px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    align-items: center;
+    overflow: hidden; 
+    z-index: 1;
+}
+.experts-section::before,
+.experts-section::after {
+    content: '';
+    position: absolute;
+    width: 370px;
+    height: 310px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: 0;
+    filter: blur(5px);
+}
+
+.experts-section::before {
+    background-image: url('../images/right.png');
+    top: 30px;
+    left: 1100px;
+    opacity: 1;
+
+}
+
+.experts-section::after {
+    background-image: url('../images/left.png');
+    bottom: 20px;
+    margin-left: 20px;
+    left: 0;
+    opacity: 1;
+}
+
+.title-wrapper h2 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 2; 
+    color: #ff4c4c;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff4c4c;
+    z-index: 2;
+}
+
+.title-divider {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.divider img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.experts-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 2;
+}
+
+.expert-card {
+    background-color: rgba(17, 17, 17, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 230px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+.profile-picture {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 4px solid #ff4c4c;
+}
+
+.likes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 3px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.expert-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.expert-title {
+    color: #ff4c4c;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.description {
+    font-size: 14px;
+}
+.see-more-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    z-index: 2;
+}
+
+.see-more-btn {
+    font-size: 14px;
+    color: #fff;
+    background-color: #2b2b2b00;
+    cursor: pointer;
+    z-index: 2;
+    margin-right: -900px;
+}
+
+
+.blog-section {
+    background-color: #000000;
+    padding: 50px 0;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  
+  .blog-card {
+    background-color: #000000; 
+    padding: 30px;
+    justify-content: flex-start;
+    border-left: 1px solid #f0f0f0;
+  }
+  
+  .blog-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FF0000; 
+    margin-bottom: 15px;
+    border:2px solid red;
+    width: fit-content;
+    padding: 3px 10px;
+}
+  
+  .blog-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF; 
+    margin-bottom: 10px;
+  }
+  
+  .blog-description {
+    color: #999999;
+    margin-bottom: 20px;
+  }
+  
+  .read-more-link {
+    color: #FF0000; 
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #FF0000;
+  }
+  
+  .read-more-link:hover {
+    text-decoration: none;
+  } 
+  .title-wrapper{
+    width: 100%;
+  } 
+  .section-title {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-divider {
+    width: 80px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.title-divider img {
+    width: 100%;
+}
+
+
+
+.center-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center-divider {
+    text-align: center; 
+}
+
+.divider-line img {
+    width: 100px;
+}
+
+.reviews-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #070404;
+    
+}
+.latest-reviews-title{
+color: rgb(199, 32, 32);
+align-items: center;
+}
+
+.container-2 {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+.reviews-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.reviews-description {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.right-column {
+    flex: 1; 
+    border-left: 2px solid rgb(180, 157, 157);
+    width:auto;
+}
+
+.reviews-content {
+    background-color: #000000;
+    padding: 20px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background: url('../images/age35.png') no-repeat center center;
+    background-size: cover;
+    border: 2px solid #ff4c4c;
+    border-radius: 50%;
+}
+
+.author-info {
+    font-size: 14px;
+    text-align: left;
+}
+
+.author-name {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.author-role {
+    color: #aaa;
+}
+
+.rating {
+    color: #ff4c4c;
+    font-size: 14px;
+}
+
+
+
+/*Footer Section*/
+
+footer {
+    background-color: #000000ec;
+    color: #fff;
+    padding: 50px 50px 20px 50px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;    
+}
+
+.footer-logo img {
+    max-width: 130px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    padding-right: 70px;
+    line-height: 2;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    padding: 0;
+    margin-top: 0px;
+}
+
+.footer-col ul li {
+    margin-bottom: 20px;
+    list-style-type: none;
+
+}
+.footer-col ul li img{
+    width: 15px;
+    height: 15px;
+    align-items: center;
+    padding: 10px 10px 0px 0px;
+}
+.footer-col ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-col ul.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 10px; 
+}
+
+.footer-col ul.social-icons li a img {
+    width: 16px;
+    height: 18px;
+}
+
+.footer-col ul.social-icons li a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+footer form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(194, 23, 23);
+    border-radius: 12px;
+    padding: 4px;
+    
+}
+footer input[type="email"] {
+    flex-grow: 1;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #000;
+    padding: 7px;
+}
+footer button {
+    background-color: rgb(163, 28, 28);
+    color: #fff;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 12px;
+}
+footer{
+    background-image: url('../images/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-col ul.social-icons {
+        justify-content: center;
+    }
+
+    footer form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 30px 15px;
+    }
+
+    .footer-col h4 {
+        font-size: 16px;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 15px;
+    }
+
+    footer input[type="email"] {
+        padding: 8px;
+    }
+
+    footer button {
+        padding: 8px 15px;
+    }
+}
+
+
+/*Review- section*/
+@media (max-width: 768px) {
+    .container-2 {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        flex: 1;
+    }
+}
+
+/*Hero-section*/
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        padding: 12px 24px;
+    }
+}
+/* Nav responsive*/
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}

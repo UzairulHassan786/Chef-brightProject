@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPT Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('/assests/images/chef-reg.svg') no-repeat center center/cover;
+            max-width: 100%;
+            padding: 5rem 4rem;
+            min-height: 80vh;
+        }
+
+        .otp-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.6rem;
+            background: rgba(0, 0, 0, 0.014);
+            backdrop-filter: blur(8px);
+            padding: 8rem 4rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            max-width: 100%;
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 400;
+            color: white;
+            padding-block: 1rem;
+        }
+        .otp-container {
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .otp-box {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .otp-input {
+            width: 3rem;
+            height: 3rem;
+            font-size: 1em;
+            text-align: center;
+            border: 1px solid red;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0);
+            color: white;
+        }
+
+        .otp-input:focus {
+            outline: none;
+            border-color: #faf2f2;
+        }
+
+        .info-text {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.1rem;
+            font-size: 0.7em;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .resend {
+            color: red;
+            cursor: pointer;
+            margin-left: 7rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .timer {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="otp-container">
+            <h2>Enter OTP</h2>
+            <div class="otp-box">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+            </div>
+            <div class="info-text">
+                Didn't receive? Resend in <span class="timer">-50 Sec</span>
+                <a href="#" class="resend">Resend OTP?</a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

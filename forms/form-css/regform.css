@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*Form-Container Css*/
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.01);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 500px;
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+h1{
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 2px solid #ff5252!important;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/*Placing icons before placeholders*/
+input[type="text"] {
+    background: url('/assests/images/user.svg') no-repeat 10px center;
+    color: white;
+    background-size: 16px 16px;
+    padding-left: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="password"] {
+    background: url('/assests/images/password.svg') no-repeat 10px center;
+    background-size: 16px 16px;
+    padding-left: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="email"]{
+    background: url('/assests/images/sms.svg') no-repeat 10px center;
+    background-size: 16px 16px;
+    padding-left: 2rem;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+input::placeholder{
+    color: #ddd;
+}
+.input-group{
+    display: flex;
+    gap: 0.5rem;
+}
+button{
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #f12727;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ff3b3b;
+}
+.captcha{
+    margin: 1rem 0;
+}
+p{
+    margin-block: 1rem;
+    text-align: center;
+}
+a{
+    color: #ff0000;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
